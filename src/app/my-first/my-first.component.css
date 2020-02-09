@@ -1,0 +1,45 @@
+* {
+    font-family: 'Helvetica';
+}
+
+.Form {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5em;
+    margin-top: 10vh;
+}
+
+.SubmitButton {
+    background-color: green;
+    border: 3px solid black !important;
+}
+
+.SubmitButton:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.Form input {
+    width: 100%;
+    border: none;
+    border-bottom: .1em solid lightgrey;
+    margin-bottom:.9em;
+    font-size: 4em;
+}
+
+.Form input:focus {
+    outline: none;
+}
+
+
+.ErrorMessage {
+    background-color: lightcoral;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.DisplayedUser {
+    margin: auto;
+    width: 50%;
+    font-size: 4em;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input placeholder="Username" class="form-control" type="text" formControlName="username"/>
+        <input placeholder="Password" class="form-control" type="password" formControlName="password"/>        
+        <div formGroupName="identification">
+            <h2>Identification</h2>
+            <input placeholder="id name" class="form-control" type="text" formControlName="idName"/>
+            <input placeholder="id number" class="form-control" type="text" formControlName="idNumber"/>
+        </div>
+        <input class="btn btn-primary" type="submit"/>
+    </form>
+</div>

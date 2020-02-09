@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input placeholder="Username" class="form-control" type="text" formControlName="username"/>
+        <input placeholder="Password" class="form-control" type="password" formControlName="password"/>        
+        <div formArrayName="identifications" *ngFor="let identification of loginForm.get('identifications').controls; let i=index;">
+            <div [formGroupName]="i">
+                <h2>Identification {{i}}</h2>
+                <input placeholder="id name" class="form-control" type="text" formControlName="idName"/>
+                <input placeholder="id number" class="form-control" type="text" formControlName="idNumber"/>
+            </div>
+        </div>
+        <input [disabled]="loginForm.status === 'INVALID'" class="btn btn-primary" type="submit"/>
+    </form>
+</div>

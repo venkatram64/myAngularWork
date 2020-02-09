@@ -1,0 +1,29 @@
+<form class="Form" (submit)="onSubmit(firstForm.status)" #firstForm="ngForm">
+    <input #name="ngModel" [(ngModel)]="newUser.name" type="text" name="name" placeholder="Name" 
+        minlength="8" maxlength="20" required/>
+    <div class="ErrorMessage" [hidden]="name.valid || name.untouched">
+        Name must between 8 and 20 characters.
+    </div>
+    <input #email="ngModel" [(ngModel)]="newUser.email" type="email" name="email" placeholder="Email" required/>    
+    <div class="ErrorMessage" [hidden]="email.valid || email.untouched">
+        Invalid email.
+    </div>
+    <input #password="ngModel" [(ngModel)]="newUser.password" type="password" name="password" placeholder="Password" 
+        minlength="8" maxlength="20" required/>
+    <div class="ErrorMessage" [hidden]="password.valid || password.untouched">
+        Password must between 8 and 20 characters.
+    </div>
+    <input #phoneNumber="ngModel" [(ngModel)]="newUser.phoneNumber" type="text" name="phoneNumber" placeholder="Phone Number"
+        minlength="10" required/>
+    <div class="ErrorMessage" [hidden]="phoneNumber.valid || phoneNumber.untouched">
+        Invalid Phone Number.
+    </div>
+    <input type="submit" class="SubmitButton" />
+</form>
+
+<div class="DisplayedUser">
+    <p>Name: {{displayUser.name}} </p>
+    <p>Email: {{displayUser.email}} </p>
+    <p>Password: {{displayUser.password}} </p>
+    <p>Phone Number: {{displayUser.phoneNumber}} </p>
+</div>
